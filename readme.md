@@ -9,15 +9,15 @@ Hardware is the TechNexion PICO-PI-IMX7 starter kit: https://shop.technexion.com
 The IMX7 is flashed with Anrdroid Things Dev Preview 6.1
 
 ## The problem
-Sluggish UI response when switching activities (takes over 4 seconds to switch activities); response of all views is sluggish - buttons, seek bars, checkboxes, etc...  The original reporter of this bug (no...@gmail.com) tracked the problem down to portiat mode; this example is another confirmation of this analysis. 
+Sluggish UI response when switching activities (takes over 4 seconds to switch activities); response of all views is sluggish - buttons, seek bars, checkboxes, etc...  The original reporter of this bug (no...@gmail.com) tracked the problem down to portriat mode; this example is another confirmation of this analysis. 
 
-## Runing the app
+## The code
 SimpleApp contains two activities, each with some dummy Buttons, SeekBars, Checkboxes and TextViews.  Both activites are set to portrait mode in the app's manifest:
 
 ```
 <activity android:name=".MainActivity"
           android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-          android:screenOrientation="landscape">
+          android:screenOrientation="portrait">
 ```
 and  
 ```<activity android:name=".AnotherActivity"
@@ -28,6 +28,15 @@ and
 
 The app starts in MainActivity, then after 5 sec runs AnotherActivity.  
 
-Statements in AnotherActivity:onCreate(..) log the execution time of  ```setContentView(R.layout.activity_another)```.
+Statements in AnotherActivity:onCreate(..) log the execution time of  ```setContentView(R.layout.activity_another)```
+
+### Running the app
+1. Execute the app
+2. Observe that MainActivity is in portrait mode.
+3. After 5 sec the app switches to AnotherActivity, note that this activity is also in portrait mode.
+4. Note the log statement that indicates the execution time of ```setContentView(...)```
+Ex:
+```I/AnotherActivity: =========== onCreate call to setContentView took: 4.125 sec ========```
+
 
 
