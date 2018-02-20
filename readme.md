@@ -34,9 +34,9 @@ Statements in AnotherActivity:onCreate(..) log the execution time of  ```setCont
 1. Execute the app
 2. Observe that MainActivity is in portrait mode.
 3. After 5 sec the app switches to AnotherActivity, note that this activity is also in portrait mode.
-4. Note the log statement that indicates the execution time of ```setContentView(...)```
-Ex:
-```I/AnotherActivity: =========== onCreate call to setContentView took: 4.125 sec ========```
+4. Note the log statement that indicates the execution time of ```setContentView(...)```  
+Ex:  
+```I/AnotherActivity: =========== onCreate call to setContentView took: 4.125 sec ========```  
 
 
 
