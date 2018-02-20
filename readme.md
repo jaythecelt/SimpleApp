@@ -112,7 +112,8 @@ I/zygote: Increasing code cache capacity to 128KB
 ```  
 
 # Summary
-Switching activites in *portrait mode* took 3.314 sec and the UI response to touches was very slow.  After changing the activites to *landscape* and rerunning the app; switching activities took 0.324 sec and the UI response was as expected.
+Switching activites in *portrait mode* took 3.314 sec and the UI response to touches was very slow.  After changing the activites to *landscape* and rerunning the app; switching activities took 0.324 sec and the UI response was as expected.  
+The time it takes to switch activities varies quite a bit, occasionally times of over 5 sec were observed.
 
 
 
