@@ -9,7 +9,7 @@ Hardware is the TechNexion PICO-PI-IMX7 starter kit: https://shop.technexion.com
 The IMX7 is flashed with Anrdroid Things Dev Preview 6.1
 
 ## The problem
-Sluggish UI response when switching activities (takes over 4 seconds to switch activities); response of all views is sluggish - buttons, seek bars, checkboxes, etc...  The original reporter of this bug (no...@gmail.com) tracked the problem down to portriat mode; this example is another confirmation of this analysis. 
+Sluggish UI response when switching activities (takes over 3 seconds to switch activities); response of all views is sluggish - buttons, seek bars, checkboxes, etc...  The original reporter of this bug (no...@gmail.com) tracked the problem down to portriat mode; this example is another confirmation of this analysis. 
 
 ## The code
 SimpleApp contains two activities, each with some dummy Buttons, SeekBars, Checkboxes and TextViews.  Both activites are set to portrait mode in the app's manifest:
@@ -110,6 +110,9 @@ I/zygote: Do partial code cache collection, code=26KB, data=30KB
 I/zygote: After code cache collection, code=26KB, data=30KB
 I/zygote: Increasing code cache capacity to 128KB
 ```  
+
+# Summary
+Switching activites in *portrait mode* took 3.314 sec and the UI response to touches was very slow.  After changing the activites to *landscape* and rerunning the app; switching activities took 0.324 sec and the UI response was as expected.
 
 
 
