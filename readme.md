@@ -1,4 +1,4 @@
-# SimpleApp - To demonstarte a bug in Android Things Dev Preview 6.1
+# SimpleApp - To demonstarte a severe bug in Android Things Dev Preview 6.1
 This app demonstrates sluggish UI response with Android Things Dev Preview 6.1 running on i.MX7 (PICO-PI-IMX7-STARTKIT).
 
 The bug was reported here: https://issuetracker.google.com/issues/70974565 and I commented on that bug ticket to indicate that I was seeing the same problem.  This app is another example to illustrate the issue.
