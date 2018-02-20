@@ -22,7 +22,7 @@ SimpleApp contains two activities, each with some dummy Buttons, SeekBars, Check
 and  
 ```<activity android:name=".AnotherActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:screenOrientation="landscape">
+            android:screenOrientation="portrait">
             
 ```
 
@@ -35,8 +35,19 @@ Statements in AnotherActivity:onCreate(..) log the execution time of  ```setCont
 2. Observe that MainActivity is in portrait mode.
 3. After 5 sec the app switches to AnotherActivity, note that this activity is also in portrait mode.
 4. Note the log statement that indicates the execution time of ```setContentView(...)```  
-Ex:  
-```I/AnotherActivity: =========== onCreate call to setContentView took: 4.125 sec ========```  
+...Ex:  
+...```I/AnotherActivity: =========== onCreate call to setContentView took: 4.125 sec ========```  
 
-
+5. In the app's mainfest change to landscape mode:  
+```
+<activity android:name=".MainActivity"
+          android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+          android:screenOrientation="landscape">
+```
+and  
+```<activity android:name=".AnotherActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="landscape">
+            
+```
 
